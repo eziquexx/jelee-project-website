@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 /* 
   사용방법
   .orbit-regular {
@@ -7,11 +7,22 @@
     font-weight: 400;
     font-style: normal;
   }
+
+  .noto-sans-kr-<uniquifier> {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
 */
 
 body {
-  font-family: "Orbit", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   background-color: #f7f7f7;
+  color: #222;
+}
+.m-font {
+  font-family: "Orbit", sans-serif;
 }
 
 #header, #cardSection, #footer {
@@ -25,10 +36,11 @@ body {
   height: auto;
   top: 0;
   left: 0;
-  padding: 28px 0;
+  padding: 25px 0;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   border-radius: 0 0 20px 20px;
+  box-shadow: 0px 1px 20px -10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   z-index:999;
 }
@@ -36,15 +48,15 @@ body {
   position: relative;
   width: 100%;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
   font-size: 2.4rem;
   font-weight: 900;
-}
-
-/* header #toggle-menu hide */
-#header #toggle-menu {
-  display: none;
+  transition: 
+    margin ease 0.3s,
+    position ease 0.3s,
+    font-size ease 0.3s
+    ;
 }
 
 #header #menu {
@@ -53,21 +65,117 @@ body {
   justify-content: center;
   margin: 0 auto;
 }
-#header #menu ul {
+#header #menu .menu-group {
   position: relative;
   display: flex;
 }
-#header #menu ul li {
+#header #menu .menu-group li {
   padding: 0 20px;
 }
-#header #menu ul li a {
+#header #menu .menu-group li a {
   text-decoration: none;
   color: #222;
   font-size: 1rem;
+  font-weight:500
 }
-#header #menu ul li a:hover {
-  color: lightcoral;
+#header #menu .menu-group li a:hover {
+  color: lightseagreen;
 }
+
+/* header #toggle-menu hide */
+#header #toggle-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  #header .container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 24px;
+  }
+  #header h1 {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    font-size: 1.5rem;
+  }
+  #header #menu .menu-group {
+    display: none;
+  }
+  #header #toggle-menu {
+    position: relative;
+    display: block;
+  }
+  #header .toggle-btn {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  #header .toggle-btn .toggle-btn-shape {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #header .toggle-btn .toggle-btn-shape span {
+    width: 16px;
+    height: 3px;
+    border-radius: 4px;
+    display: block;
+    background-color: #222;
+  }
+  #header .toggle-btn .toggle-btn-shape span:first-child {
+    transform: translate(9px, 12px) rotate(0deg);
+  }
+  #header .toggle-btn .toggle-btn-shape span:last-child {
+    transform: translate(9px, 17px);
+  }
+  /* #header .toggle-btn .toggle-btn-shape span:first-child {
+    transform: translate(9px, 16px) rotate(45deg);
+  }
+  #header .toggle-btn .toggle-btn-shape span:last-child {
+    transform: translate(9px, 13px) rotate(-45deg);
+  } */
+  #header .toggle-btn .toggle-btn-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    background-color: #efefef;
+    transition: transform ease 0.3s;
+  }
+  #header .toggle-btn:hover .toggle-btn-bg{
+    transform: scale(1.1);
+  }
+  #header .toggle-menu-group {
+   display: none;
+    
+  }
+}
+/* 
+<div id="toggle-menu">
+  <div class="toggle-btn">
+    <div class="toggle-btn-shape">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="toggle-btn-bg"></div>
+  </div>
+  <ul class="toggle-menu-group">
+    <li><a href="#">about</a></li>
+    <li><a href="https://github.com/eziquexx/">jelee-github</a></li>
+    <li><a href="https://dev-jelee.tistory.com/">tech-blog</a></li>
+  </ul>
+</div>
+*/
 
 
 /* cardSection */
@@ -76,11 +184,19 @@ body {
 }
 #cardSection #titleWrap h1 {
   display: block;
-  font-size: 2.4rem;
+  font-size: 4rem;
   font-weight: 900;
 }
 #cardSection #titleWrap p {
-  margin-top: 20px;
+  margin-top: 60px;
+  line-height: 1.8;
+  display: block;
+  color: #555;
+}
+#cardSection #titleWrap p b,
+#cardSection #titleWrap p u {
+  font-weight: 600;
+  color: #222;
 }
 
 #cardSection #cardWrap {
@@ -88,14 +204,12 @@ body {
   justify-content: flex-start;
   /* justify-content: space-between; */
   flex-wrap: wrap;
-  /* align-items: flex-start; */
+  align-items: flex-start;
   margin: 100px auto 0;
 }
 #cardSection #cardWrap .cards {
-  /* width: 23%; */
-  height: 470px;
-  /* border: 1px solid rgb(235, 235, 235); */
-  box-shadow: 0px 6px 20px -1px rgba(0, 0, 0, 0.3);
+  height: 450px;
+  box-shadow: 0px 6px 20px -1px rgba(88, 88, 88, 0.2);
   border-radius: 20px;
   overflow: hidden;
   transition: transform ease 0.3s;
@@ -140,21 +254,16 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; 
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 #cardSection .cards .card-wrap .textGroup .card-description {
   width: 100%;
-  height: 80px;
+  height: 70px;
   margin-top: 10px;
-  font-size: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 0.9rem;
   display: block;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4; /* 원하는 줄 수로 설정 */
-  white-space: normal; /* 여러 줄을 표시하도록 설정 */ 
-  border: 1px solid red;
+  overflow: hidden;
 }
 #cardSection .cards .card-wrap .textGroup .card-tag {
   position: absolute;

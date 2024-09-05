@@ -2,14 +2,15 @@ const header = document.getElementById("header");
 const headerHeight = header.offsetHeight;
 const cardSection = document.getElementById("cardSection");
 
+
+
+
 // header와 cardSection 거리
 cardSection.style.marginTop = headerHeight + 70 + "px";
 
-function cardStyle() {
+function resizeStyle() {
   const cards = document.querySelectorAll(".cards");
   const windowW = window.innerWidth;
-  let notW = [];
-  console.log(windowW);
   // 브라우저 너비 마다 카드 갯수 제한
   cards.forEach(card => {
     for(let i = 0; i < cards.length; i++){
@@ -51,5 +52,5 @@ function cardStyle() {
   });
 }
 
-window.addEventListener("resize", cardStyle);
-cardStyle();
+window.addEventListener("resize", resizeStyle);
+resizeStyle();
