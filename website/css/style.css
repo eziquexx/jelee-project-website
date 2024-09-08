@@ -25,7 +25,7 @@ body {
   font-family: "Orbit", sans-serif;
 }
 
-#header, #cardSection, #footer {
+#header, #cardSection, #aboutSection, #footer {
   width: 100%;
   padding: 0 5%;
 }
@@ -38,17 +38,16 @@ body {
   left: 0;
   padding: 25px 0;
   border-radius: 0 0 20px 20px;
+  background-color: transparent;
   overflow: hidden;
   z-index:999;
   transition: 
     transform ease-in-out 0.4s,
     background-color ease 0.4s,
-    border-bottom ease 0.4s,
     box-shadow ease 0.4s,
     padding ease 0.4s
   ;
 }
-
 #header h1 {
   position: relative;
   width: 100%;
@@ -62,6 +61,10 @@ body {
     position ease 0.3s,
     font-size ease 0.3s
     ;
+}
+#header h1 a {
+  text-decoration: none;
+  color: #222;
 }
 
 #header #menu {
@@ -176,70 +179,64 @@ body {
     top: 0;
     left: 0;
     background-color: #faf9f8;
-   }
-   #toggle-menu .toggle-menu-group {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     margin-top: 110px;
-   }
-   #toggle-menu .toggle-menu-group li {
-     width: 100%;
-     padding-left: 30px;
-     padding-right: 30px;
-     text-indent: 10px;
-   }
-   #toggle-menu .toggle-menu-group li a {
-     width: 100%;
-     margin: 10px auto;
-     display: flex;
-     padding: 25px 0;
-     text-decoration: none;
-     color: #222;
-     font-size: 1.2rem;
-     font-weight: 600;
-     background-color: #fff;
-     border-radius: 10px;
-     border: 1px solid #ddd;
-     transition: border ease 0.3s, color ease 0.3s;
-   }
-   #toggle-menu .toggle-menu-group li a:hover {
+  }
+  #toggle-menu .toggle-menu-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 110px;
+  }
+  #toggle-menu .toggle-menu-group li {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-indent: 10px;
+  }
+  #toggle-menu .toggle-menu-group li a {
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    padding: 25px 0;
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: border ease 0.3s, color ease 0.3s;
+  }
+  #toggle-menu .toggle-menu-group li a:hover {
     border: 1px solid #20b2aa;
     color: #20b2aa;
-   }
-   #toggle-menu .toggle-menu-group li a i {
+  }
+  #toggle-menu .toggle-menu-group li a i {
     margin-left: 16px;
     margin-right: 10px;
     font-size: 2rem;
-   }
-   #toggle-menu .toggle-menu-group li a span {
+  }
+  #toggle-menu .toggle-menu-group li a span {
     line-height: 1.5;
-   }
+  }
 }
-/* 
-<div id="toggle-menu">
-  <ul class="toggle-menu-group">
-    <li><a href="#" target="_blank">about</a></li>
-    <li><a href="https://github.com/eziquexx/" target="_blank">jelee-github</a></li>
-    <li><a href="https://dev-jelee.tistory.com/" target="_blank">tech-blog</a></li>
-  </ul>
-</div>
-*/
 
 
 /* cardSection */
 #cardSection {
   margin-bottom: 100px;
 }
-#cardSection #titleWrap {
+#cardSection #titleWrap,
+#aboutSection #titleWrap {
   text-align: center;
 }
-#cardSection #titleWrap h1 {
+#cardSection #titleWrap h1,
+#aboutSection #titleWrap h1 {
   display: block;
   font-size: 4rem;
   font-weight: 900;
 }
-#cardSection #titleWrap p {
+#cardSection #titleWrap p,
+#aboutSection #titleWrap p {
   margin-top: 60px;
   line-height: 1.8;
   display: block;
@@ -250,7 +247,6 @@ body {
   font-weight: 600;
   color: #222;
 }
-
 #cardSection #cardWrap {
   display: flex;
   justify-content: flex-start;
@@ -341,6 +337,109 @@ body {
   bottom: 20px;
   font-size: 0.8rem;
 }
+
+
+/* about */
+#aboutSection {
+  margin-bottom: 100px;
+}
+#aboutSection #aboutWrap {
+  margin: 100px auto 0;
+  /* border:1px solid wheat; */
+}
+#aboutSection .aboutIntroduce {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  margin-bottom: 50px;
+}
+#aboutSection .aboutIntroduce .introImgWrap {
+  width: 40%;
+  /* height: 280px; */
+  position: relative;
+  overflow: hidden;
+  background-image: url(../images/aboutImg.jpg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 70% auto;
+}
+#aboutSection .aboutIntroduce .introTextWrap {
+  width: 60%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5px 0 0 30px;
+}
+#aboutSection .aboutIntroduce .introTextWrap h2 {
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #20b2aa;
+}
+#aboutSection .aboutIntroduce .introTextWrap h2 span {
+  font-size: 1.2rem;
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li:not(:last-child) {
+  margin-bottom: 40px;
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li p b {
+  font-weight: 500;
+  text-decoration: underline;
+}
+#aboutSection .aboutSkills {
+  margin-top: 50px;
+}
+#aboutSection .aboutSkills h2 {
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #20b2aa;
+}
+#aboutSection .aboutSkills h2 span {
+  font-size: 1.2rem;
+}
+#aboutSection .aboutSkills .aboutSkillsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+#aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList {
+  width: 25%;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+#aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList:not(:last-child) {
+  margin-bottom: 30px;
+}
+#aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList div {
+  width: 50px;
+  margin-bottom: 16px;
+}
+#aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList h4 {
+ font-size: 1.1rem;
+ font-weight: 600;
+ margin-bottom: 10px;
+}
+#aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: normal;
+}
+
+
 
 /* footer */
 #footer {
