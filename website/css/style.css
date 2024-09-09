@@ -24,11 +24,16 @@ body {
 .m-font {
   font-family: "Orbit", sans-serif;
 }
-
 #header, #cardSection, #aboutSection, #footer {
   width: 100%;
   padding: 0 5%;
 }
+hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
 /* header */
 #header {
   position: fixed;
@@ -339,9 +344,12 @@ body {
 }
 
 
+
 /* about */
 #aboutSection {
-  margin-bottom: 100px;
+  width: 80%;
+  margin: 0 auto 100px;
+  /* border: 1px solid salmon; */
 }
 #aboutSection #aboutWrap {
   margin: 100px auto 0;
@@ -352,20 +360,19 @@ body {
   height: auto;
   position: relative;
   display: flex;
-  margin-bottom: 50px;
 }
 #aboutSection .aboutIntroduce .introImgWrap {
-  width: 40%;
+  width: 42%;
   /* height: 280px; */
   position: relative;
   overflow: hidden;
   background-image: url(../images/aboutImg.jpg);
   background-repeat: no-repeat;
   background-position: top right;
-  background-size: 70% auto;
+  background-size: 260px auto;
 }
 #aboutSection .aboutIntroduce .introTextWrap {
-  width: 60%;
+  width: 58%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -379,7 +386,10 @@ body {
   color: #20b2aa;
 }
 #aboutSection .aboutIntroduce .introTextWrap h2 span {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-left: 8px;
+  color: #aaa;
 }
 #aboutSection .aboutIntroduce .introTextWrap ul li:not(:last-child) {
   margin-bottom: 40px;
@@ -393,22 +403,40 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  color: #555;
 }
 #aboutSection .aboutIntroduce .introTextWrap ul li p b {
   font-weight: 500;
   text-decoration: underline;
 }
-#aboutSection .aboutSkills {
-  margin-top: 50px;
+
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a i {
+  font-size: 1.3rem;
+  color: #222;
+  margin-right: 14px;
+  transition: color ease 0.3s;
 }
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a i:hover {
+  color: #20b2aa;
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact p {
+  margin-top: 10px;
+  color: #606060;
+  font-size: 0.9rem;
+}
+/* aboutSkills */
 #aboutSection .aboutSkills h2 {
   margin-bottom: 40px;
   font-size: 1.8rem;
   font-weight: 600;
+  text-indent: 10px;
   color: #20b2aa;
 }
 #aboutSection .aboutSkills h2 span {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-left: 8px;
+  color: #aaa;
 }
 #aboutSection .aboutSkills .aboutSkillsWrap {
   display: flex;
@@ -416,15 +444,16 @@ body {
   margin-top: 20px;
 }
 #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList {
-  width: 25%;
-  padding: 0 15px;
-  margin-bottom: 20px;
+  width: 33.333%;
+  padding: 0 16px;
+  margin-bottom: 40px;
 }
-#aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList:not(:last-child) {
-  margin-bottom: 30px;
+#aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList:nth-child(n+4) {
+  margin-bottom: 0;
 }
-#aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList div {
+#aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList .aboutSkillsListTitle img {
   width: 50px;
+  display: block;
   margin-bottom: 16px;
 }
 #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList h4 {
@@ -437,8 +466,199 @@ body {
   font-weight: 400;
   line-height: 1.5;
   white-space: normal;
+  color: #555;
+}
+@media screen and (max-width: 1080px) {
+  #aboutSection {
+    width: 90%;
+  }
+  #aboutSection .aboutIntroduce .introImgWrap {
+    width: 40%;
+  }
+  #aboutSection .aboutIntroduce .introTextWrap {
+    width: 60%;
+  }
+  #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList {
+    width: 50%;
+    margin-bottom: 50px !important;
+  }
+  #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList:nth-child(n+5) {
+    margin-bottom: 0 !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  #aboutSection .aboutIntroduce {
+    flex-direction: column;
+  }
+  #aboutSection .aboutIntroduce .introImgWrap  {
+    width: 100%;
+    height: 260px;
+    margin: 0 auto 50px;
+    background-size: contain;
+    background-position: center;
+  }
+  #aboutSection .aboutIntroduce .introTextWrap {
+    width: 100%;
+    padding: 0;
+  }
+  #aboutSection .aboutIntroduce .introTextWrap h2 {
+    text-indent: 10px;
+  }
+  #aboutSection .aboutIntroduce .introTextWrap ul {
+    width: 100%;
+    padding: 0 10px;
+  }
+  #aboutSection .aboutSkills {
+    padding: 0 10px;
+  }
+  #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #dadada;
+    padding-bottom: 30px;
+    margin-bottom: 30px !important;
+  }
+  #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList:nth-child(5) {
+    margin-bottom: 30px !important;
+  }
+  #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList .aboutSkillsListTitle {
+    width: 20%;
+  }
+  #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList .aboutSkillsListTitle h4 {
+    font-size: 1rem; 
+  }
+  #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList p {
+    width: 80%;
+    padding-left: 26px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #aboutSection .aboutIntroduce .introTextWrap {
+    width: 100%;
+    padding: 0 10px;
+  }
+  #aboutSection .aboutIntroduce .introTextWrap h2 {
+    text-indent: 0;
+  }
+  #aboutSection .aboutIntroduce .introTextWrap ul {
+    width: 100%;
+    padding: 0;
+  }
+  #aboutSection .aboutSkills {
+    padding: 0 10px;
+  }
+  #aboutSection .aboutSkills h2 {
+    text-indent: 0;
+  }
+  #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #dadada;
+  }
+  #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList .aboutSkillsListTitle {
+    width: 100%;
+  }
+  #aboutSection .aboutSkills .aboutSkillsWrap .aboutSkillsList p {
+    width: 100%;
+    padding: 0;
+  }
 }
 
+
+/* aboutHistory */
+#aboutSection .aboutHistory h2 {
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-indent: 10px;
+  color: #20b2aa;
+}
+#aboutSection .aboutHistory h2 span {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-left: 8px;
+  color: #aaa;
+}
+#aboutSection .aboutHistory .historyWrap {
+  padding: 0 10px;
+  line-height: 1.6;
+}
+#aboutSection .aboutHistory .historyWrap .hItem:first-child {
+  margin-bottom: 30px;
+}
+#aboutSection .aboutHistory .historyWrap .hItem .hItemTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#aboutSection .aboutHistory .historyWrap .hItem .hItemDate {
+  margin-left: 10px;
+  color: #777;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+#aboutSection .aboutHistory .historyWrap .hItem .hItemSub {
+  font-weight: 500;
+}
+#aboutSection .aboutHistory .historyWrap .hItem .hItemDes {
+  font-weight: 500;
+  color: #777;
+}
+#aboutSection .aboutHistory .historyWrap .hItem .hItemWork .hItemWorkWrap {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+#aboutSection .aboutHistory .historyWrap .hItem .hItemWork .hItemWorkWrap .hItemWyear {
+  margin-right: 16px;
+  font-weight: 600;
+
+}
+#aboutSection .aboutHistory .historyWrap .hItem .hItemWork .hItemWorkWrap .hItemWtext li:nth-child(1) {
+  margin-right: 16px;
+  font-weight: 600;
+}
+#aboutSection .aboutHistory .historyWrap .hItem .hItemWork .hItemWorkWrap .hItemWtext li:nth-child(2) {
+  color: #666;
+}
+#aboutSection .aboutHistory .historyWrap .hItem .hItemWork .hItemWorkWrap .hItemWtext li:nth-child(2) {
+  margin-right: 16px;
+  color: #666;
+}
+
+/* certiWrap */
+#aboutSection .aboutCerti h2 {
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #20b2aa;
+}
+#aboutSection .aboutCerti h2 span {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-left: 8px;
+  color: #aaa;
+}
+#aboutSection .aboutCerti .certiWrap {
+  padding: 0 10px;
+}
+#aboutSection .aboutCerti ul li {
+  display: flex;
+}
+#aboutSection .aboutCerti ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+#aboutSection .aboutCerti ul li span {
+  margin-right: 10px;
+  width: 84px;
+}
 
 
 /* footer */

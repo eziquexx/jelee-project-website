@@ -36,7 +36,7 @@
       <li><a href="../index.html" target="_self"><i class="far fa-star"></i><span>home</span></a></li>
       <li><a href="./pages/about.html" target="_self"><i class="far fa-smile"></i><span>about</span></a></li>
       <li><a href="https://github.com/eziquexx/" target="_blank"><i class="fab fa-github"></i><span>jelee-github</span></a></li>
-      <li><a href="https://dev-jelee.tistory.com/" target="_blank"><i class="far fa-edit"></i></i><span>tech-blog</span></a></li>
+      <li><a href="https://dev-jelee.tistory.com/" target="_blank"><i class="far fa-edit"></i><span>tech-blog</span></a></li>
     </ul>
   </div>
 
@@ -53,7 +53,7 @@
         <div class="aboutIntroduce">
           <div class="introImgWrap"></div>
           <div class="introTextWrap">
-            <h2>내 소개 <span>introduce</span></h2>
+            <h2>내 소개<span>introduce</span></h2>
             <ul>
               <li>
                 <h3>인사말</h3>
@@ -65,7 +65,7 @@
                   다만 <b>배우려는 자와 배우지 않는 자로 나뉠 뿐이다.</b>"<br/>
                   <br/>
                   저는 새로운 것을 배우는 걸 좋아합니다.<br/>
-                  배우는 과정이 힘들고 그 과정 속에서 스트레스를 받기도 합니다.<br/>
+                  배우는 과정은 힘들고 그 과정 속에서 스트레스를 받기도 합니다.<br/>
                   그러나 그 시기를 지나면 어느새 쌓여있는<br/>
                   지식과 경험에 보람과 성취감을 느끼고 즐거움을 느끼는 거 같습니다.
                 </p>
@@ -74,10 +74,14 @@
                 <h3>최근 관심사</h3>
                 <p>JavaScript, React, AI</p>
               </li>
-              <li>
+              <li class="sns-contact">
                 <h3>sns & contact</h3>
-                <p>eamil, github, blog</p>
-                <p>아이콘을 클릭하면 해당 웹사이트로 이동합니다.</p>
+                <div>
+                  <a href="mailto:waftyann@gmail.com" title="waftyann@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                  <a href="https://github.com/eziquexx/" title="https://github.com/eziquexx/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://dev-jelee.tistory.com/" title="https://dev-jelee.tistory.com/" target="_blank"><i class="far fa-edit"></i></a>
+                </div>
+                <p>(아이콘을 클릭하면 해당 웹사이트로 이동합니다.)</p>
               </li>
               <li>
                 <h3>이력서 PDF</h3>
@@ -85,28 +89,40 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> <!-- introduce end-->
         <hr />
         <div class="aboutSkills">
-          <h2>기술 <span>skills</span></h2>
+          <h2>기술<span>skills</span></h2>
           <div class="aboutSkillsWrap">
             <div class="aboutSkillsList">
-              <div><img src="../images/html5-color.svg" alt=""></div>
-              <h4>HTML5</h4>
+              <div class="aboutSkillsListTitle">
+                <img src="../images/html5-color.svg" alt="">
+                <h4>HTML5</h4>
+              </div>
               <p>
-                HTML5를 사용하여 웹 페이지의 구조를 설계할 수 있습니다. 
+                HTML5를 사용하여 웹 페이지의 구조를 설계할 수 있습니다.<br/>
+                <br/>
+                그리고 최대한 간결하고 효율적인 구조를 설계하려고 노력을 합니다.
               </p>
             </div>
             <div class="aboutSkillsList">
-              <div><img src="../images/css3-color.svg" alt=""></div>
-              <h4>CSS3</h4>
+              <div class="aboutSkillsListTitle">
+                <img src="../images/css3-color.svg" alt="">
+                <h4>CSS3</h4>
+              </div>
               <p>
-                CSS3를 활용하여 웹 페이지의 콘텐츠 요소를 적절히 배치하고, 반응형 웹 디자인을 구현할 수 있습니다
+                CSS3를 활용하여 웹 페이지의 콘텐츠 요소를 적절히 배치할 수 있습니다.<br/>
+                <br/>
+                그리고 미디어 쿼리를 통해 반응형 웹 디자인을 구현할 수 있습니다.<br/>
+                <br/>
+                추가적인 기능은 W3Schools의 문서를 참고하여 구현할 수 있습니다.
               </p>
             </div>
             <div class="aboutSkillsList">
-              <div><img src="../images/jquery-color.svg" alt=""></div>
-              <h4>jQuery</h4>
+              <div class="aboutSkillsListTitle">
+                <img src="../images/jquery-color.svg" alt="">
+                <h4>jQuery</h4>
+              </div>
               <p>
                 jQuery를 활용하여 동적인 웹 요소를 구현할 수 있습니다.<br/>
                 <br/>
@@ -116,8 +132,10 @@
               </p>
             </div>
             <div class="aboutSkillsList">
-              <div><img src="../images/javascript-color.svg" alt=""></div>
-              <h4>JavaScript</h4>
+              <div class="aboutSkillsListTitle">
+                <img src="../images/javascript-color.svg" alt="">
+                <h4>JavaScript</h4>
+              </div>
               <p>
                 기본 문법은 이해하고 있으나, 구현 과정에서 유연함이 부족하고 시간이 걸립니다.<br/>
                 <br/>
@@ -127,8 +145,10 @@
               </p>
             </div>
             <div class="aboutSkillsList">
-              <div><img src="../images/react-color.svg" alt=""></div>
-              <h4>React</h4>
+              <div class="aboutSkillsListTitle">
+                <img src="../images/react-color.svg" alt="">
+                <h4>React</h4>
+              </div>
               <p>
                 현재 React의 기본 개념 중 Component의 역할과 useState, useEffect 훅의 기본적인 사용법을 이해하고 있습니다.<br/>
                 <br/>
@@ -136,8 +156,10 @@
               </p>
             </div>
             <div class="aboutSkillsList">
-              <div><img src="../images/dask.svg" alt=""></div>
-              <h4>ETC</h4>
+              <div class="aboutSkillsListTitle">
+                <img src="../images/dask.svg" alt="">
+                <h4>ETC</h4>
+              </div>
               <p>
                 개발 언어 외에도 기본적인 포토샵과 일러스트레이터를 사용할 줄 압니다.<br/>
                 <br/>
@@ -145,8 +167,116 @@
               </p>
             </div>
           </div>
-        </div>
-      </div>
+        </div> <!-- about skills end-->
+        <hr />
+        <div class="aboutHistory">
+          <h2>교육/이력<span>Education/History</span></h2>
+          <div class="historyWrap">
+            <ul class="hItem">
+              <li class="hItemTitle">연세 IT 미래교육원<span class="hItemDate">2024-06-10 ~ 2024-12-26</span></li>
+              <li class="hItemSub">기업 실무 프로젝트 반영 풀스택 개발자 양성 수업 수강</li>
+              <li class="hItemDes">
+                HTML5, CSS3, jQuery, JavaScript, React, Vue, JAVA, mySQL, JSP 등 여러 수업을 수강.
+              </li>
+            </ul>
+            <ul class="hItem">
+              <li class="hItemTitle">이노스 코리아<span class="hItemDate">2016.04 ~ 2018.11</span></li>
+              <li class="hItemSub">Graphic & Web, Mobile, Program Design</li>
+              <li class="hItemDes">
+                2년 7개월을 근무하였으며 주 업무는 사내 기술 데모용 웹, 모바일 앱을 기획 및 디자인 하였습니다.<br/>
+                그리고 외부에서 들어온 프로젝트에 참여하여 디자인 및 디자인 기획을 하였습니다.
+              </li>
+              <li class="hItemWork">
+                <div class="hItemWorkWrap">
+                  <div class="hItemWyear">2018</div>
+                  <ol class="hItemWtext">
+                    <li>KMS & KIOSK</li>
+                    <li>JNL</li>
+                    <li>KMS(Kiosk Management System)와 KIOSK 내부 프로그램 디자인 시안을 작업.</li>
+                  </ol>
+                </div>
+                <div  class="hItemWorkWrap">
+                  <div class="hItemWyear">2018</div>
+                  <ol class="hItemWtext">
+                    <li>Hotspot Planet</li>
+                    <li>Innoaus</li>
+                    <li>
+                      자주가는 장소의 WiFi를 등록 후 간편하게 연결하는 모바일 앱. (ios앱 출시)<br/>
+                      디자인 기획 및 디자인 시안 작업.
+                    </li>
+                  </ol>
+                </div>
+                <div class="hItemWorkWrap">
+                  <div class="hItemWyear">2018</div>
+                  <ol class="hItemWtext">
+                    <li>Random Factory</li>
+                    <li>Innoaus</li>
+                    <li>
+                      RAINPASS 알고리즘을 응용하여 만든 모바일 앱.(android, ios 출시)
+                      디자인 기획 및 디자인 시안 작업.                      
+                    </li>
+                  </ol>
+                </div>
+                <div class="hItemWorkWrap">
+                  <div class="hItemWyear">2018</div>
+                  <ol class="hItemWtext">
+                    <li>평창올림픽 개막식</li>
+                    <li>Smartlogic</li>
+                    <li>
+                      '모두를 위한 미래'퍼포먼스 초반에 나오는 영상 이미지 변환 및 커팅.(영상제작x)<br/>
+                      이미지 적용 및 테스트 참여.                   
+                    </li>
+                  </ol>
+                </div>
+                <div class="hItemWorkWrap">
+                  <div class="hItemWyear">2017</div>
+                  <ol class="hItemWtext">
+                    <li>LS DB Editor</li>
+                    <li>LS산전</li>
+                    <li>
+                      LS DB편집기 기능 및 디자인 리뉴얼에서 디자인 시안 작업.              
+                    </li>
+                  </ol>
+                </div>
+                <div class="hItemWorkWrap">
+                  <div class="hItemWyear">2016</div>
+                  <ol class="hItemWtext">
+                    <li>Scada-Pas C# 온라인 DB편집기</li>
+                    <li>LS산전</li>
+                    <li>
+                      LS산전에서 개발한 Scada-Pas C# 온라인 DB편집기 기능 및 
+                      화면 리뉴얼을 위한 디자인 기획 및 시안 작업.           
+                    </li>
+                  </ol>
+                </div>
+                <div class="hItemWorkWrap">
+                  <div class="hItemWyear">2016</div>
+                  <ol class="hItemWtext">
+                    <li>FiSi Signage 모바일 앱&프로그램</li>
+                    <li>Smartlogic</li>
+                    <li>
+                      Flexible LED에 컨텐츠를 편집 후 전송하는 기술을 위한
+                      모바일 앱 기획 및 시안, 프로그램 시안 작업.           
+                    </li>
+                  </ol>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div> <!-- aboutHistory end-->
+        <hr/>
+        <div class="aboutCerti">
+          <div class="certiWrap">
+            <h2>자격증<span>Certifications</span></h2>
+            <ul>
+              <li><span>2021.07.09</span>웹디자인기능사/한국산업인력공단</li>
+              <li><span>2015.10.16</span>컴퓨터그래픽스운용기능사/한국생산인력공단</li>
+              <li><span>2015.09.11</span>GTQ 포토샵 1급/한국생산성본부(KPC)</li>
+              <li><span>2002.03</span>워드프로세서3급/대한상공회의소</li>
+            </ul>
+          </div>
+        </div> <!-- aboutCerti end-->
+      </div> <!-- aboutWrap end-->
     </div> <!-- container end -->
   </section>
 
