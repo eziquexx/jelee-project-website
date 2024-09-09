@@ -66,7 +66,45 @@ let wheelHandler = function() {
   }
 }
 window.addEventListener("wheel", wheelHandler);
-window.addEventListener("touchmove", wheelHandler);
+
+
+// 모바일 터치 이벤트 핸들러
+let touchStartY = 0;
+let touchEndY = 0;
+// 모바일 터치후 움직일 때의 이벤트
+function handleTouchMove(event) {
+  const touchCurrentY = event.touches[0].clientY;
+  if (touchCurrentY < touchStartY) {
+      // 터치 다운 했을 때
+      header.style.transform = "translateY(-150px)";
+      header.style.backgroundColor = "transparent";
+      header.style.borderBottom = "none";
+      header.style.boxShadow = "none";
+  } else {
+      // 터치 업 했을 때
+      header.style.transform = "translateY(0px)";
+      header.style.backgroundColor = "#fff";
+      header.style.borderBottom = "1px solid #ddd";
+      header.style.boxShadow = "0px 1px 20px -10px rgba(0, 0, 0, 0.3)";
+  }
+}
+// 모바일 터치 시작점의 Y값 구하기
+function handleTouchStart(event) {
+  touchStartY = event.touches[0].clientY;
+}
+function handleTouchEnd() {
+  // 모바일 터치가 끝난 시점의 Y값 구하여 저장
+  const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+  if (currentScrollTop === 0) {
+    header.style.transform = "translateY(0px)";
+    header.style.backgroundColor = "transparent";
+    header.style.borderBottom = "none";
+    header.style.boxShadow = "none";
+  }
+}
+window.addEventListener('touchstart', handleTouchStart);
+window.addEventListener('touchmove', handleTouchMove);
+window.addEventListener('touchend', handleTouchEnd);
 
 
 

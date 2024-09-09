@@ -659,6 +659,18 @@ hr {
   margin-right: 10px;
   width: 84px;
 }
+@media screen and (max-width: 560px) {
+  #aboutSection .aboutCerti ul li {
+    display: flex;
+    flex-direction: column;
+  }
+  #aboutSection .aboutCerti ul li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  #aboutSection .aboutCerti ul li span {
+    margin-bottom: 8px;
+  }
+}
 
 
 /* footer */
