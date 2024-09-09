@@ -34,14 +34,13 @@ function removeMouseEventHandlers() {
   header.removeEventListener("mouseenter", mouseEnterHandler);
   header.removeEventListener("mouseleave", mouseLeaveHandler);
 }
-
 addMouseEventHandlers();
 
 
 
 // window wheel event handler
 // mouse wheel up일 때와 wheel down일 때의 효과
-window.addEventListener("wheel", function(event) {
+let wheelHandler = function() {
   let wheelMove = event.deltaY * -0.01;
 
   // toggleMenu가 block이 아니면 실행하게 만들기.
@@ -65,8 +64,9 @@ window.addEventListener("wheel", function(event) {
       header.style.boxShadow = "0px 1px 20px -10px rgba(0, 0, 0, 0.3)";
     }
   }
-  
-});
+}
+window.addEventListener("wheel", wheelHandler);
+window.addEventListener("touchmove", wheelHandler);
 
 
 
@@ -87,7 +87,6 @@ toggleBtn.addEventListener("click", function() {
     header.style.transform = "translateY(0px)";
     removeMouseEventHandlers();
   }
-
 });
 
 
