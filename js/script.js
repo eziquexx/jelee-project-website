@@ -165,7 +165,7 @@ function resizeStyle() {
         cards[i-1].style.marginRight = "4%";
       } else {
         // windowW 600 이하 경우, 2의 배수 카드는 marginRgiht 없음.
-        cards[i].style.width = "80%";
+        cards[i].style.width = "86%";
         cards[i].style.margin = "0 auto 12%";
       }
     }

@@ -28,9 +28,16 @@ body {
   width: 100%;
   padding: 0 5%;
 }
+@media screen and (max-width: 600px) {
+  #header, #cardSection, #aboutSection, #footer {
+    padding: 0 8%;
+  }
+}
 hr {
   margin-top: 50px;
   margin-bottom: 50px;
+  border: 1px solid #919191;
+  border-top: 0;
 }
 
 
@@ -252,6 +259,17 @@ hr {
   font-weight: 600;
   color: #222;
 }
+#cardSection #titleWrap span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 20px;
+  line-height: 1.8;
+  color: #555;
+}
+#cardSection #titleWrap span u {
+  font-style: italic;
+}
 #cardSection #cardWrap {
   display: flex;
   justify-content: flex-start;
@@ -409,21 +427,54 @@ hr {
   font-weight: 500;
   text-decoration: underline;
 }
-
-#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a i {
-  font-size: 1.3rem;
-  color: #222;
-  margin-right: 14px;
-  transition: color ease 0.3s;
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact > div {
+  display: flex;
 }
-#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a i:hover {
-  color: #20b2aa;
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a.icons {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  display: block;
+  transition: background-image ease 0.2s;
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a.icons:not(:last-child) {
+  margin-right: 12px;
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a.email-icon {
+  background-image: url(../images/icon-envelope.svg);
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a.email-icon:hover {
+  background-image: url(../images/icon-envelope2.svg);
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a.github-icon {
+  background-image: url(../images/icon-github.svg);  
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a.github-icon:hover {
+  background-image: url(../images/icon-github2.svg);
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a.notion-icon {
+  background-image: url(../images/icon-notion.svg);  
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a.notion-icon:hover {
+  background-image: url(../images/icon-notion2.svg);
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a.tistory-icon {
+  width: 64px;
+  background-image: url(../images/icon-tistory.svg);  
+}
+#aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact a.tistory-icon:hover {
+  background-image: url(../images/icon-tistory2.svg);
 }
 #aboutSection .aboutIntroduce .introTextWrap ul li.sns-contact p {
   margin-top: 10px;
   color: #606060;
   font-size: 0.9rem;
 }
+
+
+
 /* aboutSkills */
 #aboutSection .aboutSkills h2 {
   margin-bottom: 40px;
@@ -628,10 +679,7 @@ hr {
 #aboutSection .aboutHistory .historyWrap .hItem .hItemWork .hItemWorkWrap .hItemWtext li:nth-child(2) {
   color: #666;
 }
-#aboutSection .aboutHistory .historyWrap .hItem .hItemWork .hItemWorkWrap .hItemWtext li:nth-child(2) {
-  margin-right: 16px;
-  color: #666;
-}
+
 
 /* certiWrap */
 #aboutSection .aboutCerti h2 {
@@ -660,6 +708,9 @@ hr {
   width: 84px;
 }
 @media screen and (max-width: 560px) {
+  #aboutSection {
+    width: 96%;
+  }
   #aboutSection .aboutCerti ul li {
     display: flex;
     flex-direction: column;
@@ -690,4 +741,3 @@ hr {
   text-align: center;
   font-size: 0.9rem;
 }
-

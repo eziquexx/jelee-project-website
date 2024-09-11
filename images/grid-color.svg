@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+	<title>icons8-grid-48</title>
+	<defs>
+		<image  width="36" height="36" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkBAMAAAATLoWrAAAAAXNSR0IB2cksfwAAABhQTFRFYrT0Y7X2ZLX2Y7T2ZbX0AAAAZLT1Y7T02Tb2NwAAAAh0Uk5TS+T/40kA4khNHFemAAAAWklEQVR4nGNkVGRgEFL8fUiAgVFJYA2Iw2j0gYGBRf/feQYGBucPd0EcRiUgm8H47wUgyWxwFsShtRAWRzjfZ2Bwfff/3gcGFv8H70AcxlAGdECk0Ki3h563AQKogjynqPsVAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="6" y="6"/>
+</svg>
